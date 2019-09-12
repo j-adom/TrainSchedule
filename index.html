@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <!-- Link to Moment.js should go here -->
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    
+
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-database.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.min.js"></script>
+
+</head>
+<body>
+    <!-- ### Instructions
+
+    * Make sure that your app suits this basic spec:
+      
+      * When adding trains, administrators should be able to submit the following:
+        
+        * Train Name
+        
+        * Destination 
+        
+        * First Train Time -- in military time
+        
+        * Frequency -- in minutes
+      
+      * Code this app to calculate when the next train will arrive; this should be relative to the current time.
+      
+      * Users from many different machines must be able to view same train times.
+      
+      * Styling and theme are completely up to you. Get Creative! -->
+  
+  
+  
+    <div class="container">
+        
+        <div class="jumbotron">
+            <h1>J's Train Company</h1>
+            <h2>Todays' Trains and Departures</h2>
+            <h3><div id="clock" class="clock">loading ...</div></h3>
+        </div>"
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        Trains
+                    </div>
+                    <div class="card-body">
+
+                        <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (In Minutes)</th>
+                            <th scope="col">Next Departure</th>
+                            <th scope="col">Minutes Away    </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                           
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+           </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-12">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        Add Train
+                    </div>
+                
+                <div class="card-body">
+                 <!-- Here we create an HTML Form for handling the inputs-->
+                    <form role="form">
+
+                        <!-- Here we create the text box for capturing the search term-->
+                        <div class="form-group">
+                                <label for="search">Train Name</label>
+                                <input type="text" class="form-control" id="train-name">
+                        </div>
+                        <div class="form-group">
+                                  <label for="search">Destination</label>
+                                  <input type="text" class="form-control" id="train-destination">
+                        </div>
+                        <div class="form-group">
+                                <label for="search">Departure Frequency (in Minutes)</label>
+                                <input type="text" class="form-control" id="train-frequency">
+                        </div>
+                        <div class="form-group">
+                                  <label for="search">First Departure Time (hh:mm)</label>
+                                  <input type="text" class="form-control" id="train-start">
+                        </div>
+                        
+        
+                        <!-- Here we have our final submit button -->
+                        <button type="submit" class="btn btn-default" id="add-train">
+                         Submit
+                        </button>
+                        
+        
+                     </form>
+              
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/javascript/trainsched.js"></script>   
+</body>
+</html>
